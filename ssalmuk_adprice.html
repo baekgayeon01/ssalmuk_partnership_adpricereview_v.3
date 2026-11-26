@@ -1,0 +1,192 @@
+<title>쌀먹닷컴 광고비 적정가 검토</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f6f7f6; --surface:#ffffff; --ink:#18201f; --muted:#5b6765; --line:#dde3e1;
+  --accent:#0f7a6e; --accent-soft:#e2f1ee; --accent-ink:#0b5a51;
+  --good:#1f7a3a; --good-bg:#e5f3e8;
+  --warn:#a3461f; --warn-bg:#fbeee7;
+  --sans:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111615; --surface:#182120; --ink:#e4ebe9; --muted:#97a6a3; --line:#2a3634;
+  --accent:#46c2b2; --accent-soft:#16302c; --accent-ink:#7fdccf;
+  --good:#6fcf88; --good-bg:#16301e; --warn:#f0a07c; --warn-bg:#35201a;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111615; --surface:#182120; --ink:#e4ebe9; --muted:#97a6a3; --line:#2a3634;
+  --accent:#46c2b2; --accent-soft:#16302c; --accent-ink:#7fdccf;
+  --good:#6fcf88; --good-bg:#16301e; --warn:#f0a07c; --warn-bg:#35201a;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+header{display:flex;flex-direction:column;gap:4px;border-bottom:1px solid var(--line);padding-bottom:18px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--accent-ink);font-weight:600}
+h1{font-size:28px;line-height:1.3;margin:0;text-wrap:balance}
+.meta{color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:4px 14px}
+.meta .lbl{color:var(--ink);font-weight:700;margin-right:4px}
+section{display:flex;flex-direction:column;gap:12px}
+h2{font-size:19px;margin:0;display:flex;align-items:baseline;gap:10px;text-wrap:balance}
+h2 .n{font-family:var(--mono);font-size:13px;color:var(--accent-ink)}
+.block{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px;min-width:0}
+.block ul,.callout ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.callout{border-left:3px solid var(--good);background:var(--good-bg);padding:14px 18px;border-radius:0}
+.callout .big{font-size:17px;font-weight:700;margin:0 0 6px}
+.callout p{margin:0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi .k{font-size:12.5px;color:var(--muted)}
+.kpi .v{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi .s{font-size:12.5px;color:var(--muted)}
+.kpi.bad{border-color:var(--warn)}
+.kpi.bad .v{color:var(--warn)}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th,td{text-align:right;padding:9px 12px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
+th{font-size:12.5px;color:var(--muted);font-weight:600;background:var(--bg)}
+th:first-child,td:first-child{text-align:left}
+tr:last-child td{border-bottom:0}
+tr.sum td{font-weight:700;background:var(--accent-soft);color:var(--accent-ink)}
+tr.hl td{font-weight:700;background:var(--warn-bg);color:var(--warn)}
+.note{font-size:13px;color:var(--muted);margin:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.grid2 h3{font-size:15px;margin:0 0 6px}
+.src{display:grid;gap:6px;font-size:14px}
+.src div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px}
+.src b{font-family:var(--mono);color:var(--accent-ink);font-size:13px;padding-top:1px}
+.evi{border-top:1px solid var(--line);padding-top:18px;margin-top:8px;font-size:13px;color:var(--muted)}
+.evi h4{font-size:13px;margin:0 0 8px;color:var(--ink);letter-spacing:.04em}
+.evi ol{margin:0;padding-left:18px;display:grid;gap:8px}
+.evi li b{display:block;color:var(--ink);font-weight:600}
+</style>
+
+<div class="wrap">
+<header>
+  <h1>쌀먹닷컴 광고비 적정가 검토</h1>
+</header>
+
+<section>
+  <h2><span class="n">01</span>결론</h2>
+  <div class="callout">
+    <p class="big">적정 협상 범위 : 월 100~150만 원 (목표가 125만 원 이내)</p>
+    <ul>
+      <li>① 매체 가치 : 유사 매체 단가 비교 기준 → 월 100~150만 원</li>
+      <li>② 거래 기여도 : 현행 배너 성과 기준 → 광고비 회수 근거 부족, 150만 원 초과 근거 없음</li>
+      <li>③ 상호 제휴 가치 : 당사 시세 데이터 제공 및 개발 리소스 투입 → 단가 인하 근거</li>
+    </ul>
+  </div>
+  <p class="note">※ 월 100~150만 원은 유사 매체 단가와 트래픽으로 산정한 협상 범위이며, 실제 거래 성과로 검증된 가격은 아님</p>
+
+  <h3 style="font-size:16px;margin:12px 0 0">① 매체 가치 : 유사 매체 단가 비교</h3>
+  <div class="block">
+    <ul>
+      <li><b>트레디아 (산정 기준)</b> : 사이트 성격(게임 거래·시세 커뮤니티)이 비슷하고 현재 집행 중인 매체 (월 70만 원, 상단 배너)</li>
+      <li><b>깨비지지 (보조 검증)</b> : 광고 방식(데이터 연동 노출 + 메인 배너)이 비슷한 매체 (월 350만 원, 디스코드 매물 노출·매크로 + 메인 슬라이드 배너, 26.11.24~ 집행)</li>
+    </ul>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>비교 매체</th><th>매체 트래픽</th><th>광고비</th><th>쌀먹 트래픽</th><th>쌀먹 적용 금액</th></tr></thead>
+    <tbody>
+      <tr><td>트레디아</td><td>월 방문 14.1만 회</td><td>월 70만 원</td><td>3개월 평균 19.4만 회 / 10월 30.5만 회</td><td>약 97만 원 / 약 152만 원 → <b>100~150만 원</b></td></tr>
+      <tr class="sum"><td>깨비지지 (보조)</td><td>월 방문자 134만 명</td><td>월 350만 원</td><td>MAU 48만 명</td><td>약 125만 원 → <b>목표가</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">※ 트레디아·쌀먹 방문수 : Semrush 공개 데이터 (26.08~10). 깨비지지·쌀먹 방문자 : 매체 자체 집계 (네이버 애널리틱스 / 쌀먹 제안서)</p>
+  <p class="note">※ 쌀먹 10월 방문수는 3개월 평균 대비 약 57% 높은 수치로 지속성이 검증되지 않아, 150만 원은 성장 가능성을 선반영한 상한으로 설정</p>
+  <p class="note">※ 깨비지지는 상품 구성(디스코드 포함)·집계 방식·VAT 포함 여부가 달라 직접 산정이 아닌 보조 검증으로 활용</p>
+
+  <h3 style="font-size:16px;margin:12px 0 0">② 거래 기여도 : 현행 배너 성과 및 광고비 회수 가능성</h3>
+  <div class="kpis">
+    <div class="kpi"><span class="k">구매전환 회원 (10개월)</span><span class="v">12명</span><span class="s">월평균 약 1명</span></div>
+    <div class="kpi"><span class="k">수익금액 (10개월)</span><span class="v">17만 원</span><span class="s">월평균 약 1.7만 원</span></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>2026년</th><th>클릭수</th><th>로그인수</th><th>구매전환 회원</th><th>구매금액</th><th>수익금액</th></tr></thead>
+    <tbody>
+      <tr><td>1월</td><td>853</td><td>63</td><td>2</td><td>376,000</td><td>22,560</td></tr>
+      <tr><td>2월</td><td>365</td><td>28</td><td>3</td><td>656,900</td><td>39,414</td></tr>
+      <tr><td>3월</td><td>458</td><td>19</td><td>1</td><td>138,200</td><td>8,292</td></tr>
+      <tr><td>4월</td><td>1,700</td><td>11</td><td>2</td><td>820,640</td><td>49,238</td></tr>
+      <tr><td>5월</td><td>1,277</td><td>14</td><td>2</td><td>539,280</td><td>32,357</td></tr>
+      <tr><td>6월</td><td>3,556</td><td>6</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>7월</td><td>6,399</td><td>12</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>8월</td><td>5,989</td><td>5</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>9월</td><td>4,304</td><td>4</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>10월</td><td>5,437</td><td>13</td><td>2</td><td>324,860</td><td>19,492</td></tr>
+      <tr class="sum"><td>합계</td><td>30,338</td><td>175</td><td>12</td><td>2,855,880</td><td>171,352</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">※ 출처 : 광고 효과 분석 26_외부 시트 (현행 메인 롤링 배너 1구좌, 광고비 0원). 시세 지면 4곳 노출과는 규모가 달라 참고용</p>
+  <div class="tbl"><table>
+    <thead><tr><th>월 광고비</th><th>회수에 필요한 월 거래금액</th><th>현행 수익 대비</th></tr></thead>
+    <tbody>
+      <tr><td>100만 원</td><td>약 1,667만 원</td><td>약 58배</td></tr>
+      <tr class="sum"><td>125만 원</td><td>약 2,083만 원</td><td>약 73배</td></tr>
+      <tr><td>150만 원</td><td>약 2,500만 원</td><td>약 88배</td></tr>
+      <tr class="hl"><td>500만 원</td><td>약 8,333만 원</td><td>약 292배</td></tr>
+      <tr class="hl"><td>800만 원</td><td>약 1억 3,333만 원</td><td>약 467배</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">※ 수수료율 6% 기준 단순 수수료 수익으로 계산 (현행 월평균 수익 17,135원 대비). 기타 비용, 신규 지면과 기존 롤링 배너의 성과 차이, 신규 회원의 장기 거래 가치는 미반영</p>
+  <p class="note">※ 게임 커뮤니티 매체는 ROAS 1 미만으로도 집행 중 (트레디아 26년 0.78, 25년 0.28). 손익분기는 유료 전환 판단의 참고 기준</p>
+
+  <h3 style="font-size:16px;margin:12px 0 0">③ 상호 제휴 가치 : 당사 시세 데이터 제공</h3>
+  <div class="block">
+    <ul>
+      <li>이번 제휴는 배너 광고 구매가 아닌, 당사 시세·거래순위 데이터를 쌀먹 시세 게시판 콘텐츠로 제공하는 상호 제휴 구조</li>
+      <li>쌀먹은 시세 게시판 신설로 콘텐츠 경쟁력 강화, 이용자 유입·재방문 증가 효과 기대 가능</li>
+      <li>당사는 데이터 연동 개발(F/E·B/E·DBA) 및 유지보수 리소스 투입</li>
+      <li>→ 일반 배너 광고 대비 단가 인하 또는 초기 무상 제휴 요청의 근거로 활용 (별도 금액 환산은 하지 않음)</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">02</span>진행 방안</h2>
+  <div class="grid2">
+    <div class="block">
+      <h3>A안 · 유료 광고 전환</h3>
+      <ul>
+        <li>협상 단계 : 최초 제시가 100만 원 → 목표가 125만 원 이내 → 상한 150만 원</li>
+        <li>시세 제공은 양해각서 조건 유지, 광고비는 별도 계약</li>
+        <li>오픈 후 월간 리포트(지면별·게임별 성과)로 단가 재검토</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h3>B안 · 무상 진행 후 재협의</h3>
+      <ul>
+        <li>양해각서 조건(배너 바터 + 시세 제공, 무상)으로 시세 게시판 오픈</li>
+        <li>오픈 후 3개월 실제 거래 전환 성과를 확인한 뒤 광고비 재협의</li>
+        <li>재협의 시 적정 협상 범위(월 100~150만 원) 적용</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">※ 공통 : 결정 후 쌀먹 회신(광고비·계약 기간, 기간별 이력 1개월/6개월 변경 안내) → 연동 정보·명세서 전달 → 테스트 → 지면 구축·검수 → 오픈</p>
+</section>
+
+<section>
+  <h2><span class="n">03</span>컨펌 요청 사항</h2>
+  <div class="block src">
+    <div><b>01</b><span><strong>진행 방안</strong> : A안(유료 광고 전환) / B안(무상 진행 후 재협의) 중 선택</span></div>
+    <div><b>02</b><span><strong>협상 단가</strong> : A안 진행 시 협상 단계(제시가 100만 원 / 목표가 125만 원 이내 / 상한 150만 원) 확인</span></div>
+    <div><b>03</b><span><strong>결렬 시 대응</strong> : 쌀먹이 협상 범위를 수용하지 않을 경우 B안 전환 또는 시세 연동 보류 여부</span></div>
+  </div>
+</section>
+
+<footer class="evi">
+  <h4>증빙 자료</h4>
+  <ol>
+    <li><b>IM 광고 효과 분석 엑셀 · 26_외부 시트</b><span>트레디아 월 광고비 70만 원(26.01~10), 쌀먹닷컴 월별 클릭·로그인·구매전환·구매금액·수익금액(26.01~10, 현행 바터 배너·광고비 0원) 인용</span></li>
+    <li><b>Semrush 트래픽 공개 데이터</b><span>tradia.me·ssalmuk.com 월 방문수(26.08~10), 2026.11.11 업데이트 기준</span></li>
+    <li><b>깨비지지 광고 기안</b><span>도깨비의 세계 통합 디스코드·깨비지지 광고, 월 350만 원(VAT 포함, 디스코드+메인 슬라이드 배너), 최근 30일(26.10.11~11.09) 방문자 1,341,879명(네이버 애널리틱스) 인용</span></li>
+    <li><b>쌀먹닷컴 시세 게시판 광고 제안서 (2026.11.10, ㈜태강에스티)</b><span>2p '쌀먹닷컴 소개' 월 방문자 수(MAU) 480,000명, 일 방문자 수(DAU) 20,000명+ 기재 내용 인용</span></li>
+    <li><b>트레디아 사이트 화면 (tradia.me/diablo2, 2026.11.26 확인)</b><span>메인 중앙 및 서브 페이지(시세표 등) 상단에 아이템매니아 가로 배너 1종 노출 확인</span></li>
+  </ol>
+</footer>
+</div>
